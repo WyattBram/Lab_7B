@@ -12,16 +12,18 @@ public class Main {
     }
 
     public static Boolean isReverse(String s,String ss){
-        if(Objects.equals(s, ss)){
+        if (s.isEmpty() && ss.isEmpty()) {
             return true;
-        }
-        if(s.isEmpty()){
+        } else if (s.length() != ss.length()) {
             return false;
         }
-        else{
-            return isReverse(s.substring(1) + s.charAt(0), ss);
-
+        if(s.charAt(0) == ss.charAt(ss.length() -1)){
+            return isReverse(s.substring(1), ss.substring(0,ss.length()-1));
         }
+        else if((s.charAt(0) != ss.charAt(ss.length() -1))){
+            return false;
+        }
+         return true;
     }
 
 
@@ -29,7 +31,7 @@ public class Main {
 
     public static void main(String[] args) {
         //System.out.println(repeatNTimes("I must study recursion until it makes sense", 100));
-        System.out.println(isReverse("fad","daf"));
+        System.out.println(isReverse("",""));
 
     }
 }
