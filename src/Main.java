@@ -11,12 +11,15 @@ public class Main {
         }
     }
 
-    public static Boolean repeatNTimes(String s,String ss){
+    public static Boolean isReverse(String s,String ss){
         if(Objects.equals(s, ss)){
             return true;
         }
+        if(s.isEmpty()){
+            return false;
+        }
         else{
-            return repeatNTimes(s.substring(1) + s.charAt(0), ss);
+            return isReverse(s.substring(1) + s.charAt(0), ss);
 
         }
     }
@@ -25,8 +28,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(repeatNTimes("I must study recursion until it makes sense", 100));
-
+        //System.out.println(repeatNTimes("I must study recursion until it makes sense", 100));
+        System.out.println(isReverse("fad","daf"));
 
     }
 }
