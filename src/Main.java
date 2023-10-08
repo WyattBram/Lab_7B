@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Main {
-
+//Repeats a string a certin amount of times
     public static String repeatNTimes(String s,int i){
         if(i == 1){
             return  s + "\n";
@@ -10,7 +10,7 @@ public class Main {
             return s + "\n" + repeatNTimes(s, i-1);
         }
     }
-
+//Checks if a string is reversed version of other string
     public static Boolean isReverse(String s,String ss){
         if (s.isEmpty() && ss.isEmpty()) {
             return true;
