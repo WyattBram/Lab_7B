@@ -11,7 +11,7 @@ public class Main {
             return s + repeatNTimes(s, i-1);
         }
     }
-    //Checks if a string is reversed version of other string
+    //Checks if a string is reversed version of other strin
     public static Boolean isReverse(String s,String ss){
         if (s.isEmpty() && ss.isEmpty()) {
             return true;
