@@ -30,7 +30,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //System.out.println(repeatNTimes("I must study recursion until it makes sense", 100));
+        System.out.println(repeatNTimes("I must study recursion until it makes sense", 100));
         System.out.println(isReverse("",""));
 
     }
